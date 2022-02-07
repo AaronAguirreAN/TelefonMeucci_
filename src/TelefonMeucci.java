@@ -7,12 +7,12 @@ public class TelefonMeucci {
 
     public static void main(String[] args) {
 
-        Scanner t = new Scanner(System.in);
+        Scanner t = new Scanner(System.in); //per introduir desde teclat
         while(t.hasNext()){
-            contador = 0;
+            contador = 0;   //contador començara desde 0
             fr=t.next();
             if(!fr.contains("I")&&!fr.contains("V")) {
-                contador++;
+                contador++;     //incrementem el contador
             }else {
                 comprova(fr);
             }
@@ -20,7 +20,7 @@ public class TelefonMeucci {
         }
     }
 
-    private static void comprova(String f) {
+    private static void comprova(String f) {    //una funció per comprovar
         for(int i=1;i<5&&i<=f.length();i++){
             boolean trobat=false;
             for(int j=0;j<10;j++){
@@ -32,7 +32,7 @@ public class TelefonMeucci {
                 if(res.length()>0)
                     comprova(res);
                 else if(res.length()==0){
-                    contador++;
+                    contador++; //incrementem el contador +1
                     return;
                 }
             }
